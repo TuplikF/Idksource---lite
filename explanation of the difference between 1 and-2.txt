@@ -1,0 +1,29 @@
+The differences between the two codes are as follows:
+
+ ### 1. Main differences in functionality
+ - First code (with `run_program` and `process_input` functions):
+   - Allows to run the program from the directory `./Program1/`.
+   - Splits the input command into arguments using `strtok`.
+   - Supports multiple arguments (maximum 10) for a command.
+
+ - Second code (with `read_input` and `execute_program` functions):
+   - Allows to run the program from the directory `./Programs/`.
+   - It has no support for multiple arguments, it assumes that the input is just the name of the program.
+   - Uses the `access` function to check if the program is executable.
+
+ ### 2. Differences in code structure
+ - First code:
+   - Defines `MAX_CMD_LENGTH` and `MAX_ARGS` macros.
+   - Splits the input into arguments and allows them to be processed.
+
+ - Second code:
+   - Defines `MAX_CMD_LENGTH` and `PROGRAM_DIR` macros.
+   - Uses the `access` function to check whether a file is executable.
+   - Has a `read_input` function to read the command line.
+
+ ### 3. Other differences
+ - The first code uses `snprintf` to create a command to execute the program.
+ - The second code uses `snprintf` to create a path to a file in the `./Programs/` directory.
+ - The second code removes the newline from the end of the input using `strcspn`.
+
+ I hope this comparison helps you understand the differences between the two codes.  If you have any other questions or need further clarification, let me know!

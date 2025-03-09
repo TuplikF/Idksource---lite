@@ -5,7 +5,7 @@ void kernel_main(void) {
     const char* str = "Hello, world!";
     while (*str) {
         *video_memory++ = *str++;
-        *video_memory++ = 0x07; // Attribute-byte: light grey on black screen
+        *video_memory++ = 0xE0; // Attribute-byte: black background on yellow screen. What was here before (for Tuplik) : 0x07  light grey on black screen
     }
     while (1); // Infinite loop to keep the kernel running
 }
